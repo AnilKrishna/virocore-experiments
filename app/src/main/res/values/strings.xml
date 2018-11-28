@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">ARPlacingObjectsKt</string>
+  <string name="action_settings">Settings</string>
+  <string name="ar_is_intialised">AR is intialised</string>
+</resources>

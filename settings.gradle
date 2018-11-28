@@ -1,0 +1,1 @@
+include ':app', ':app-viro_core-release', ':gvr_common', ':ar_core_client'

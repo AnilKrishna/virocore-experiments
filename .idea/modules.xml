@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ViroCore-Experiment.iml" filepath="$PROJECT_DIR$/ViroCore-Experiment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-viro_core-release/app-viro_core-release.iml" filepath="$PROJECT_DIR$/app-viro_core-release/app-viro_core-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ar_core_client/ar_core_client.iml" filepath="$PROJECT_DIR$/ar_core_client/ar_core_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gvr_common/gvr_common.iml" filepath="$PROJECT_DIR$/gvr_common/gvr_common.iml" />
+    </modules>
+  </component>
+</project>
