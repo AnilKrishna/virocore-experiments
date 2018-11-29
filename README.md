@@ -16,5 +16,8 @@ The aim of the experiment is to:
 Tap on the 'Viro' button to get a dialog of objects to place in the scene. 
 Once placed, the objects can be dragged, rotated, and scaled using pinch and rotate gestures.
 
+## References
+* [ViroCore Playground Trello](https://trello.com/b/uH6dr8a0/arcore-playground)
+
 
 
