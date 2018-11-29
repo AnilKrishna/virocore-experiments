@@ -1,19 +1,3 @@
-/*
- * Copyright (c) 2017-present, Viro, Inc.
- * All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.ustwo.virocoreexperiments
 
 import android.app.Activity
@@ -62,9 +46,9 @@ class ImageRecognitionViroARActivity : Activity(), ARScene.Listener {
     private var mCarModelNode: Node? = null
     private var mColorChooserGroupNode: Node? = null
     private var mTargetedNodesMap: MutableMap<String, Pair<ARImageTarget, Node>>? = null
-    private val mCarColorTextures = HashMap<CAR_MODEL, Texture>()
+    private val mCarColorTextures = HashMap<CARMODEL, Texture>()
 
-    private enum class CAR_MODEL private constructor(val carSrc: String, val colorPickerSrc: Vector) {
+    private enum class CARMODEL(val carSrc: String, val colorPickerSrc: Vector) {
         WHITE("object_car_main_Base_Color.png", Vector(231f, 231f, 231f)),
         BLUE("object_car_main_Base_Color_blue.png", Vector(19f, 42f, 143f)),
         GREY("object_car_main_Base_Color_grey.png", Vector(75f, 76f, 79f)),
@@ -226,13 +210,12 @@ class ImageRecognitionViroARActivity : Activity(), ARScene.Listener {
         mColorChooserGroupNode!!.transformBehaviors = EnumSet.of(Node.TransformBehavior.BILLBOARD_Y)
         mColorChooserGroupNode!!.setPosition(Vector(0.0, 0.25, 0.0))
         val pickerPositions = floatArrayOf(-.2f, -.1f, 0f, .1f, .2f)
-        var i = 0
 
         // Loop through car color model colors
-        for (model in CAR_MODEL.values()) {
+        for ((i, model) in CARMODEL.values().withIndex()) {
             // Create our sphere picker geometry
             val colorSphereNode = Node()
-            val posX = pickerPositions[i++]
+            val posX = pickerPositions[i]
             colorSphereNode.setPosition(Vector(posX, 0f, 0f))
             val colorSphere = Sphere(0.03f)
 
@@ -316,7 +299,7 @@ class ImageRecognitionViroARActivity : Activity(), ARScene.Listener {
         node.geometry.materials = Arrays.asList(material)
 
         // Loop through color.
-        for (model in CAR_MODEL.values()) {
+        for (model in CARMODEL.values()) {
             val carBitmap = getBitmapFromAssets(model.carSrc)
             val carTexture = Texture(carBitmap!!, Texture.Format.RGBA8, true, true)
             mCarColorTextures[model] = carTexture
@@ -325,7 +308,7 @@ class ImageRecognitionViroARActivity : Activity(), ARScene.Listener {
             material.diffuseTexture = carTexture
         }
 
-        material.diffuseTexture = mCarColorTextures[CAR_MODEL.WHITE]
+        material.diffuseTexture = mCarColorTextures[CARMODEL.WHITE]
         return material
     }
 
@@ -335,7 +318,7 @@ class ImageRecognitionViroARActivity : Activity(), ARScene.Listener {
 
     private fun getBitmapFromAssets(assetName: String): Bitmap? {
         val istr: InputStream
-        var bitmap: Bitmap? = null
+        var bitmap: Bitmap?
         try {
             istr = assets.open(assetName)
             bitmap = BitmapFactory.decodeStream(istr)
