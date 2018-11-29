@@ -1,12 +1,12 @@
-package com.ustwo.arplacingobjectskt
+package com.ustwo.virocoreexperiments
 
 import android.app.AlertDialog
 import android.os.Bundle
-import com.ustwo.arplacingobjectskt.arcomponents.BaseARActivity
+import com.ustwo.virocoreexperiments.arcomponents.BaseARActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : BaseARActivity() {
+class PlacingARObjectsActivity : BaseARActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

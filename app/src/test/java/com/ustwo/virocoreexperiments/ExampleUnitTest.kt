@@ -1,4 +1,4 @@
-package com.ustwo.arplacingobjectskt
+package com.ustwo.virocoreexperiments
 
 import org.junit.Test
 

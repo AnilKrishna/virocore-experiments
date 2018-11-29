@@ -1,10 +1,10 @@
-package com.ustwo.arplacingobjectskt.arcomponents
+package com.ustwo.virocoreexperiments.arcomponents
 
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.ustwo.arplacingobjectskt.R
+import com.ustwo.virocoreexperiments.R
 import com.viro.core.*
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,7 +15,7 @@ private const val MAX_DISTANCE = 10f
 abstract class BaseARActivity:AppCompatActivity(),ViroViewARCore.StartupListener{
 
     //In future when we want to add multiple objects in scene we can add..
-    // In intial version we will have only one view
+    // In initial version we will have only one view
     private lateinit var mDraggableObjects: MutableList<Draggable3DObject>
 
     //this basically is an entry point to our vr world and their components
@@ -42,14 +42,14 @@ abstract class BaseARActivity:AppCompatActivity(),ViroViewARCore.StartupListener
 
             override fun onARInitialized() {
                 trackingText.visibility = View.VISIBLE
-                trackingText.setText(R.string.ar_is_intialised)
+                trackingText.setText(R.string.ar_is_initialised)
                 addObject.visibility = View.VISIBLE
             }
         })
         // Add a light to the scene so our models show up
         mScene?.rootNode?.addLight(AmbientLight(Color.WHITE.toLong(), 1000f))
 
-        viroViewARCore?.setScene(mScene)
+        viroViewARCore?.scene = mScene
     }
 
     //ViroView ARCore startup failure callback

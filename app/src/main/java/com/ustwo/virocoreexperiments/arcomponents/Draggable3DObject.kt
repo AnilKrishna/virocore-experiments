@@ -1,4 +1,4 @@
-package com.ustwo.arplacingobjectskt.arcomponents
+package com.ustwo.virocoreexperiments.arcomponents
 
 import android.content.Context
 import android.net.Uri

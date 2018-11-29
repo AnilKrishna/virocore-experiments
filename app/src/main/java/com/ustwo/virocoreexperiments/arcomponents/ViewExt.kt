@@ -1,4 +1,4 @@
-package com.ustwo.arplacingobjectskt.arcomponents
+package com.ustwo.virocoreexperiments.arcomponents
 
 import android.view.View
 import android.widget.Toast

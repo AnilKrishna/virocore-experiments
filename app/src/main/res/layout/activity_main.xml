@@ -4,7 +4,7 @@
   android:fitsSystemWindows="true"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".MainActivity">
+  tools:context=".PlacingARObjectsActivity">
 
   <com.viro.core.ViroViewARCore
     android:id="@+id/viroViewARCore"
@@ -20,7 +20,7 @@
     android:id="@+id/trackingText"
     android:gravity="center_horizontal"
     android:textColor="@color/white"
-    tools:text="@string/ar_is_intialised"
+    tools:text="@string/ar_is_initialised"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="top"/>

@@ -1,4 +1,4 @@
-package com.ustwo.arplacingobjectskt.arcomponents
+package com.ustwo.virocoreexperiments.arcomponents
 
 import com.viro.core.*
 import java.lang.ref.WeakReference
