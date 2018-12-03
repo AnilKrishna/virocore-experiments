@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.ustwo.virocoreexperiments.R
 import com.viro.core.*
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.base_ar_activity.*
 
 
 // Constants used to determine if plane or point is within bounds. Units in meters.
@@ -23,7 +23,7 @@ abstract class BaseARActivity:AppCompatActivity(),ViroViewARCore.StartupListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.base_ar_activity)
         mDraggableObjects = mutableListOf()
         viroViewARCore.setStartupListener(this)
     }

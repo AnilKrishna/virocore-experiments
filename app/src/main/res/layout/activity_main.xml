@@ -1,40 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:fitsSystemWindows="true"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".PlacingARObjectsActivity">
-
-  <com.viro.core.ViroViewARCore
-    android:id="@+id/viroViewARCore"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent">
 
-  <TextView
-    android:paddingTop="@dimen/_16dp"
-    android:paddingBottom="@dimen/_16dp"
-    android:visibility="gone"
-    tools:visibility="visible"
-    android:background="#B3000000"
-    android:id="@+id/trackingText"
-    android:gravity="center_horizontal"
-    android:textColor="@color/white"
-    tools:text="@string/ar_is_initialised"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="top"/>
+    <TextView
+        android:id="@+id/txtHeader"
+        android:text="Choose AR Experience"
+        android:textSize="25sp"
+        android:padding="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
 
-  <ImageButton
-    android:layout_margin="@dimen/_16dp"
-    android:visibility="gone"
-    tools:visibility="visible"
-    android:id="@+id/addObject"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom|center_horizontal"
-    android:gravity="center"
-    android:background="@mipmap/viro_launcher"
-    />
+    <Button
+        android:id="@+id/btnPlacingObjectsLaunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:textColor="#FFF"
+        android:padding="20sp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/txtHeader"
+        android:layout_centerInParent="true"
+        android:text="Launch Placing 3D Objects"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btnCarModelLaunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:textColor="#FFF"
+        android:padding="20sp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/btnPlacingObjectsLaunch"
+        android:layout_centerInParent="true"
+        android:text="Launch Tesla Car Model"/>
+
+    <Button
+        android:id="@+id/btnMotionPosterLaunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:textColor="#FFF"
+        android:padding="20sp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/btnCarModelLaunch"
+        android:layout_centerInParent="true"
+        android:text="Launch Black Panther Poster"/>
+
+</RelativeLayout>

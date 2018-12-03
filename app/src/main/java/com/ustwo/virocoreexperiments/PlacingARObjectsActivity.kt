@@ -3,7 +3,7 @@ package com.ustwo.virocoreexperiments
 import android.app.AlertDialog
 import android.os.Bundle
 import com.ustwo.virocoreexperiments.arcomponents.BaseARActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.base_ar_activity.*
 
 
 class PlacingARObjectsActivity : BaseARActivity() {

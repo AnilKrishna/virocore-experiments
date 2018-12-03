@@ -40,7 +40,7 @@ import java.util.HashMap
  * detected, a 3D Tesla car is created over the logo, along with controls that let
  * the user customize the car.
  */
-class ImageRecognitionViroARActivity : Activity(), ARScene.Listener {
+class CarModelExperienceARActivity : Activity(), ARScene.Listener {
     private var mViroView: ViroView? = null
     private var mScene: ARScene? = null
     private var mCarModelNode: Node? = null
@@ -403,6 +403,6 @@ class ImageRecognitionViroARActivity : Activity(), ARScene.Listener {
     }
 
     companion object {
-        private val TAG = ImageRecognitionViroARActivity::class.java.simpleName
+        private val TAG = CarModelExperienceARActivity::class.java.simpleName
     }
 }

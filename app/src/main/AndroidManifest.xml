@@ -25,6 +25,19 @@
     <meta-data android:name="com.google.ar.core" android:value="optional" />
 
     <activity
+        android:label="@string/app_name"
+        android:name="com.ustwo.virocoreexperiments.MainActivity"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <activity
       android:label="@string/app_name"
       android:name="com.ustwo.virocoreexperiments.PlacingARObjectsActivity"
       android:theme="@style/AppTheme.NoActionBar"
@@ -34,7 +47,7 @@
 
     <activity
         android:label="@string/app_name"
-        android:name="com.ustwo.virocoreexperiments.ImageRecognitionViroARActivity"
+        android:name="com.ustwo.virocoreexperiments.CarModelExperienceARActivity"
         android:theme="@style/AppTheme.NoActionBar"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:screenOrientation="portrait">
@@ -54,11 +67,6 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:screenOrientation="portrait">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
     </activity>
   </application>
 
