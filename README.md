@@ -1,7 +1,7 @@
 # ViroCore-Playground
 
-This is the playground for learning and experiment with the [ViroAR](https://viromedia.com/viroar/) from 
-[ViroMedia](https://viromedia.com/) for AR experiences on [ARCore Supported Devices](https://developers.google.com/ar/discover/supported-devices)
+This is the playground for learning and experimenting with [ViroAR](https://viromedia.com/viroar/) from 
+[ViroMedia](https://viromedia.com/) for creating AR experiences on [ARCore Supported Devices](https://developers.google.com/ar/discover/supported-devices)
 
 * This repo provides a foundation for usage of [ViroCore](https://viromedia.com/virocore/) in android application.
 * Leverage the capabilities of idiomatic kotlin to create a concise kotlin version of [ViroCore Java Project](https://github.com/viromedia/virocore).
