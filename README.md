@@ -1,13 +1,14 @@
-# virocore-playground
+# ViroCore-Playground
 
-This is the playground for learning and experimenting the ViroCore SDK. This repo provides a foundation for usage of ViroCore in android applications. 
+This is the playground for learning and experiment with the [ViroAR](https://viromedia.com/viroar/) from 
+[ViroMedia](https://viromedia.com/) for AR experiences on [ARCore Supported Devices](https://developers.google.com/ar/discover/supported-devices)
 
-The aim of the experiment is to:
-
-* Provide a basic understanding on usage of ViroCore SDK for Augmented Reality needs.
-* Leverage the capabilities of idiomatic kotlin to create a concise version of [ViroCore](https://github.com/viromedia/virocore) java project.
+* This repo provides a foundation for usage of [ViroCore](https://viromedia.com/virocore/) in android application.
+* Leverage the capabilities of idiomatic kotlin to create a concise kotlin version of [ViroCore Java Project](https://github.com/viromedia/virocore).
 
 # Dependencies
+*  ViroCore
+*  ARCore
 *  Kotlin stdlib
 *  kotlin-android plugin
 
@@ -20,7 +21,7 @@ When a Tesla logo is detected, a 3D Tesla car is created over the logo, along wi
 
 * Movie poster experience demonstrates how to use an AR-ImageTarget: in this case, when a Black Panther poster is recognised, a Black Panther model will jump out of the poster.
 
-## References
+## Trello Dashboard
 * [ViroCore Playground Trello](https://trello.com/b/uH6dr8a0/arcore-playground)
 
 
