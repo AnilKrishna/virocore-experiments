@@ -34,7 +34,7 @@
     android:layout_height="72dp"
     android:layout_gravity="bottom|center_horizontal"
     android:gravity="center"
-    android:background="@mipmap/viro_launcher"
+    android:background="@drawable/ic_place_objects"
     />
 
 </FrameLayout>
