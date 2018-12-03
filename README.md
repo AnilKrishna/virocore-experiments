@@ -12,7 +12,7 @@ This is the playground for learning and experimenting with [ViroAR](https://viro
 *  Kotlin stdlib
 *  kotlin-android plugin
 
-## Features
+# Features
 * The ARPlacingObjects experience sample basically builds an AR scene that lets the user place and drag objects. 
 Tap on the placing objects icon to get a dialog of objects to place in the scene. Once placed, the objects can be dragged, rotated, and scaled using pinch and rotate gestures.
 
@@ -21,7 +21,7 @@ When a Tesla logo is detected, a 3D Tesla car is created over the logo, along wi
 
 * Movie poster experience demonstrates how to use an AR-ImageTarget: in this case, when a Black Panther poster is recognised, a Black Panther model will jump out of the poster.
 
-## Trello Dashboard
+# Trello Dashboard
 * [ViroCore Playground Trello](https://trello.com/b/uH6dr8a0/arcore-playground)
 
 
