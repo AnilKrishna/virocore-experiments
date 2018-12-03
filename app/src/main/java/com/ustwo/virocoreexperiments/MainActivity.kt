@@ -26,5 +26,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnARPortalLaunch.setOnClickListener {
+            val intent = Intent(this, ARPortalActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
