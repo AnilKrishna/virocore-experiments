@@ -59,7 +59,15 @@ class ARPortalActivity : Activity() {
 
         // Load a model representing the ship door
         mShipDoorModel = Object3D()
-        mShipDoorModel!!.loadModel(mViroView?.viroContext, Uri.parse("file:///android_asset/arportal/portal_ship.vrx"), Object3D.Type.FBX,null)
+        mShipDoorModel!!.loadModel(mViroView?.viroContext, Uri.parse("file:///android_asset/arportal/portal_ship.vrx"), Object3D.Type.FBX,object : AsyncObject3DListener {
+            override fun onObject3DLoaded(`object`: Object3D, type: Object3D.Type) {
+                Log.e(ARPortalActivity.TAG, "Ship Model Successfully loaded.")
+            }
+
+            override fun onObject3DFailed(error: String) {
+                Log.e(ARPortalActivity.TAG, "Ship Model Failed to load.")
+            }
+        })
 
         // Create a Portal out of the ship door
         val portal = Portal()
@@ -69,6 +77,7 @@ class ARPortalActivity : Activity() {
         // Create a PortalScene that uses the Portal as an entrance.
         val portalScene = PortalScene()
         portalScene.setPosition(Vector(0.0F,0.0F,-5.0F))
+        portalScene.isPassable = true
         portalScene.portalEntrance = portal
 
         // Add a 'beach' background for the Portal scene
