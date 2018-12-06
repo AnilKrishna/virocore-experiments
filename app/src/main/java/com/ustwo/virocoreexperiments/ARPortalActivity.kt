@@ -51,6 +51,7 @@ class ARPortalActivity : Activity() {
         // Create the base ARScene
         mScene = ARScene()
 
+
         // Add a Light so the ship door portal entrance will be visible
         val light = OmniLight()
         light.color = Color.WHITE.toLong()
@@ -59,7 +60,7 @@ class ARPortalActivity : Activity() {
 
         // Load a model representing the ship door
         mShipDoorModel = Object3D()
-        mShipDoorModel!!.loadModel(mViroView?.viroContext, Uri.parse("file:///android_asset/arportal/portal_ship.vrx"), Object3D.Type.FBX,object : AsyncObject3DListener {
+        mShipDoorModel!!.loadModel(mViroView?.viroContext, Uri.parse("file:///android_asset/arportal/portal_wood_frame.vrx"), Object3D.Type.FBX,object : AsyncObject3DListener {
             override fun onObject3DLoaded(`object`: Object3D, type: Object3D.Type) {
                 Log.e(ARPortalActivity.TAG, "Ship Model Successfully loaded.")
             }
@@ -81,8 +82,11 @@ class ARPortalActivity : Activity() {
         portalScene.portalEntrance = portal
 
         // Add a 'beach' background for the Portal scene
-        val beachBackground = getBitmapFromAssets("beach.jpg")
+        val beachBackground = getBitmapFromAssets("sydney.jpg")
         val beachTexture = Texture(beachBackground,Texture.Format.RGBA8,true,false)
+/*        val beachVideoTexture = VideoTexture(mViroView?.viroContext, Uri.parse("file:///android_asset/crystal_shower_falls.mp4"))
+        beachVideoTexture.play()
+        beachVideoTexture.loop = true*/
         portalScene.setBackgroundTexture(beachTexture)
 
         mScene!!.rootNode.addChildNode(portalScene)

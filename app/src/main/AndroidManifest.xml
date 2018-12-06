@@ -5,6 +5,7 @@
 
   <!-- Required for AR -->
   <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
 
   <!-- Required for Recording -->
   <uses-permission android:name="android.permission.RECORD_AUDIO"/>

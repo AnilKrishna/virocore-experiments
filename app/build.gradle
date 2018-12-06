@@ -39,4 +39,5 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-ddb-mapper:2.2.22'
     implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.6'
     implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.2.22'
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.2'
 }
