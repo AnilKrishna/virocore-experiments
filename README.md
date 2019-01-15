@@ -23,8 +23,5 @@ When a Tesla logo is detected, a 3D Tesla car is created over the logo, along wi
 
 * The AR Portal sample creates an AR effect where a 'window' or 'door' is displayed that users can use to peer into a virtual world.
 
-# Trello Dashboard
-* [ViroCore Playground Trello](https://trello.com/b/uH6dr8a0/arcore-playground)
-
 
 
